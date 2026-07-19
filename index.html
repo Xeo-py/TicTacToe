@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="heading">Tic-Tac-Toe</h1>
+    <dialog id="startDialog">
+        <label for="playerOne">Enter Player One Name:</label>
+        <input type="text" id="playerOne" required>
+        <label for="playerTwo">Enter Player Two Name:</label>
+        <input type="text" id="playerTwo" required>
+        <button type="button" id="startBtn">Start</button>
+    </dialog>
+    <dialog id="endDialog">
+        <p id="endResult"></p>
+        <button type="button" id="restartBtn">Restart</button>
+    </dialog>
+    <div id="board">
+        <button data-row="0" data-col="0" class="cell"></button>
+        <button data-row="0" data-col="1" class="cell"></button>
+        <button data-row="0" data-col="2" class="cell"></button>
+        <button data-row="1" data-col="0" class="cell"></button>
+        <button data-row="1" data-col="1" class="cell"></button>
+        <button data-row="1" data-col="2" class="cell"></button>
+        <button data-row="2" data-col="0" class="cell"></button>
+        <button data-row="2" data-col="1" class="cell"></button>
+        <button data-row="2" data-col="2" class="cell"></button>
+    </div>
+    <h2 id="result"></h2>
+    <script src="script.js"></script>
+</body>
+</html>

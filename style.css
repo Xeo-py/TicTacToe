@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Courier New", Courier, monospace;
+    color: #111;
+    background-color: #fcfcfc;
+    background-image: 
+        linear-gradient(90deg, transparent 79px, #999 79px, #999 81px, transparent 81px),
+        linear-gradient(#ddd 1px, transparent 1px);
+    background-size: 100% 100%, 100% 2em;
+    background-position: 0 0, 0 1em;
+}
+#heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px #ccc;
+    background: #fff;
+    padding: 0 10px;
+}
+#result {
+    height: 30px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #fff;
+    padding: 0 10px;
+}
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 350px;
+    height: 350px;
+    gap: 4px;
+    background-color: #222;
+    border: 4px solid #222;
+    box-shadow: 8px 8px 0px #ccc;
+    margin-top: 20px;
+}
+.cell {
+    background-color: #fff;
+    border: none;
+    font-size: 4rem;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+.cell:hover {
+    background-color: #eee;
+}
+.cell:active {
+    background-color: #ddd;
+}
+dialog {
+    margin: auto;
+    padding: 30px;
+    border: 3px solid #222;
+    background-color: #fff;
+    box-shadow: 8px 8px 0px #888;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+dialog label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+dialog input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #555;
+    background-color: #fafafa;
+    font-family: "Courier New", Courier, monospace;
+    outline: none;
+}
+dialog input[type="text"]:focus {
+    border-color: #111;
+    background-color: #fff;
+}
+button#startBtn, 
+button#restartBtn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+    color: #fff;
+    background-color: #222;
+    border: 2px solid #222;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+button#startBtn:hover, 
+button#restartBtn:hover {
+    background-color: #fff;
+    color: #222;
+}
+#endResult {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
